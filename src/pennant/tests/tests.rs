@@ -1,3 +1,7 @@
+#![feature(box_into_raw_non_null)]
+
+use pennant::Pennant;
+
 #[test]
 fn test_combining_two_one_element_pennants() {
     let mut x = Pennant::new("Mercury");
