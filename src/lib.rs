@@ -89,8 +89,6 @@ impl<T> Bag<T> {
     /// Unions the Bag with the input Bag, resulting in a single
     /// Bag that contains all the elements from each Bag
     pub fn union(&mut self, other: Bag<T>) {
-        let len = other.len();
-
         for option in other.spine {
             match option {
                 None => continue,
@@ -104,8 +102,6 @@ impl<T> Bag<T> {
                 }
             }
         }
-
-        self.count += len;
     }
 
     /// Splits the Bag into two roughly equally-sized Bags
