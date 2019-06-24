@@ -14,7 +14,7 @@ use pennant::Pennant;
 /// that for some Pennant in one of the slots of the spine, the Pennant's
 /// k value matches the array index it resides in.
 pub struct Bag<T> {
-    spine: Vec<Option<NonNull<Pennant<T>>>>,
+    pub spine: Vec<Option<NonNull<Pennant<T>>>>,
     capacity: u32,
     count: usize,
 }

@@ -46,7 +46,7 @@ fn test_union_with_empty_bags() {
    let empty = Bag::new();
    bag.union(empty);
 
-   assert_eq!(bag.count, 0);
+   assert_eq!(bag.len(), 0);
    assert!(bag.spine.iter().all(|x| x.is_none()));
 }
 
@@ -64,6 +64,7 @@ fn test_union_with_one_nonempty_bag_and_one_empty_bag() {
     assert!(bag.spine[1].is_some());
 }
 
+#[test]
 fn test_union_with_nonempty_bags() {
     let mut bag = Bag::new();
     bag.insert("Mercury");
